@@ -24,19 +24,25 @@ var data = [{
 	id: 2,
 	des: '修真修真修真修真修真',
 	url: 'http://g.hiphotos.baidu.com/image/h%3D300/sign=1ae574b8e8cd7b89f66c3c833f254291/1e30e924b899a90182ea2f4413950a7b0308f5e1.jpg'
+},{
+	title: '修真',
+	id: 2,
+	des: '修真修真修真修真修真',
+	url: 'http://b.hiphotos.baidu.com/image/h%3D300/sign=c2211687db6285358de0d421a0ee76f2/6609c93d70cf3bc7c64ca199df00baa1cd112a72.jpg'
+},{
+	title: '修真',
+	id: 2,
+	des: '修真修真修真修真修真',
+	url: 'http://g.hiphotos.baidu.com/image/h%3D300/sign=1ae574b8e8cd7b89f66c3c833f254291/1e30e924b899a90182ea2f4413950a7b0308f5e1.jpg'
 }]
+var aboutData = 'fsdfs胜多负少发送到发送到就fsdfs胜多负少发送到发送到就fsdfs胜多负少发送到发送到就'
+
+
 app.get('/', function(req, res, next){
 	res.render('index',{
 		title: '首页',
-		data: [{
-			title: '小说',
-			id: 1,
-			des: '佛挡杀佛解释了发送的佛挡'
-		},{
-			title: '修真',
-			id: 2,
-			des: '修真修真修真修真修真'
-		}]
+		data: data,
+		aboutData:aboutData
 	})
 })
 
@@ -63,7 +69,7 @@ app.get('/art', function(req, res, next){
 app.get('/about', function(req, res, next){
 	res.render('about',{
 		title: '关于我们',
-		data: '发送的艰苦奋斗舒服舒服的时刻发送的艰苦奋斗舒服舒服的时刻发送的艰苦奋斗舒服舒服的时刻发送的艰苦奋斗舒服舒服的时刻发送的艰苦奋斗舒服舒服的时刻'
+		data: aboutData
 	})
 })
 

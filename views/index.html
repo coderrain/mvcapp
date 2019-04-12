@@ -34,8 +34,8 @@
 	<div class="nav">
 		<ul>
 			<li><a href="">首页</a></li>
-			<li><a href="">关于我们</a></li>
-			<li><a href="">新闻动态</a></li>
+			<li><a href="/about">关于我们</a></li>
+			<li><a href="/list3">新闻动态</a></li>
 			<li><a href="">XXX产业</a></li>
 			<li><a href="">投资者关系</a></li>
 			<li><a href="">企业文化</a></li>
@@ -58,30 +58,33 @@
 					<span>共</span>
 					<span>共</span>
 				</div>
-				<p>xxxxxxxxxxx公司地处经济繁荣的长江三角洲，创建于1982年，经过30余年的专注与创新，从中央空调制造业发展成为集节
-能装备、化工新材料、酒店服务、金融地产、生物医药等产业于一体的大型综合性企业集团，名列中国机械工业500强、 中国民
-营百强、中国工业行业排头兵企业。</p>
-				<a href="">点击查看全部 >></a>
+				<p>{{ aboutData }}</p>
+				<a href="/about">点击查看全部 >></a>
 			</div>
 		</div>
 
 		<div class="list">
 			<ul>
-				<li class="list_item">
+				{% for key,val in data %}
+					{% if key === 3 %}
+					  <li class="no_mr list_item">
+					{% else %}
+					  <li class="list_item">
+					{% endif %}
 					<div class="list_speac"></div>
 					<div class="list_top">
 						<img src="./img/list1.jpg" alt="">
 					</div>
 					<div class="topic">
-						<img src="./img/list_1.jpg" alt="">
-						<span>企业文化</span>
+						<img style="width: 100%;height: 100px;" src="{{ val.url }}" alt="">
+						<span>{{val.title}}</span>
 						<div></div>
 					</div>
-					<p>优良的产品、优良的服务 ；资产优良、盈利能力优良。 </p>
-					<p>学习才能进取，创造方为永恒。品质、服务、创新 </p>
-					<a href="" class="more_link">查看更多>></a>
+					<p>{{val.des}} </p>
+					<a href="/art?id={{ val.id }}" class="more_link">查看更多>></a>
 				</li>
-				<li class="list_item">
+				{% endfor %}
+				<!-- <li class="list_item">
 					<div class="list_speac"></div>
 					<div class="list_top">
 						<img src="./img/list1.jpg" alt="">
@@ -129,7 +132,7 @@
 						<li class="lsit_item_three"><a href="">·无锡市长汪泉来司调研</a><span>09/12</span></li>
 					</ul>
 					<a href="" class="more_link">查看更多>></a>
-				</li>
+				</li> -->
 			</ul>
 		</div>
 

@@ -28,7 +28,7 @@
 	</style>
 </head>
 <body>	
-	<div class="main">
+	<!-- <div class="main">
 	<h3>《复联4》台湾开票！2700万人涌入致网站崩溃</h3>
 	<div class="img"><img src="https://n.sinaimg.cn/ent/transform/729/w630h899/20190412/WnwV-hvntnkr0563649.jpg"></div>
 	<p>新浪娱乐讯 据台湾媒体报道，台湾威秀影城、美丽华影城12日中午12点开卖《复仇者联盟4：终局之战》（Avengers： Endgame）台湾预售票，未料还没开卖，网站...<a href="">[详细]</a></p>
@@ -42,12 +42,16 @@
 	<h3>安东尤金纪录片今夏北美上映 回顾短暂但热情一生</h3>
 	<div class="img"><img src="https://n.sinaimg.cn/ent/transform/652/w630h822/20190412/ZaXB-hvntnkr0143140.jpg"></div>
 	<p>新浪娱乐讯 北京时间4月12日消息，一部关于安东·尤金（《星际迷航》《爱疯了》）的纪录片《Love， Antosha》将于今夏北美上映，Lurker Productions发行...[详细]<a href="">[详细]</a></p>
-    </div>
-     <div class="main">
-	<h3>新版《地狱男爵》电影口碑解禁 整体混乱不及前作</h3>
-	<div class="img"><img src="https://n.sinaimg.cn/ent/transform/184/w630h354/20190412/H1to-hvntnkr0100399.jpg"></div>
-	<p>新浪娱乐讯 北京时间4月12日消息，新版《地狱男爵》电影口碑解禁，烂番茄新鲜度10%，MTC35分（22评1好15中6差）。大多数媒体认为全片混乱、冗杂，即使演员有出色表现...[详细]<a href="">[详细]</a></p>
-    </div>
+    </div> -->
+    
+
+    {% for key, val in data %}
+	  <div class="main">
+		<h3>{{ val.title }}</h3>
+		<div class="img"><img src="{{ val.url }}"></div>
+		<p>{{ val.des }}...<a href="/art?id={{val.id}}">[详细]</a></p>
+	  </div>
+	{% endfor %}
     
     
     
