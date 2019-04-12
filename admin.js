@@ -12,7 +12,7 @@ app.set('view engine','html');
 app.engine('html', swig.renderFile);
 
 
-app.use('/', express.static('./'));
+app.use('/', express.static('./public'));
 
 
 /*app.get('/', function(req, res, next){
