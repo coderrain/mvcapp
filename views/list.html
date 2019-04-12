@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<ul>
+		<!-- <li>1</li>
+		<li>2</li>
+		<li>3</li> -->
+		{% for key,val in data %}
+		  <li>{{ val.name }} 价格：{{ val.price }}</li>
+		{% endfor %}
+	</ul>
+</body>
+</html>
