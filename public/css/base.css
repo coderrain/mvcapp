@@ -1,0 +1,26 @@
+/* 初始化css样式（为什么初始，因为浏览器给的默认值不一样） */
+body,ul,li,p,h1,h2,h3,h4,h5,h6{
+	margin: 0;
+	padding: 0;
+	font-family: "宋体";
+}
+body{
+/* 	min-width: 1000px; */
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+
+ul,li{
+	list-style: none;
+}
+h1,h2,h3,h4,h5,h6{
+	font-weight: 400;
+}
+
+img{
+	border: 0;
+}
+
+

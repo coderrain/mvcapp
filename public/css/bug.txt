@@ -1,0 +1,15 @@
+火狐
+谷歌
+360
+ie11
+
+
+ie9 出现什么问题： a标签遇到img的时候会出现边框 应该初始化img的边框为0
+ie8 
+	出现圆角不正常 
+	opacity 不兼容  opacity: 0.4; filter:alpha(opacity=40);
+
+ie6（_）
+	png24图片不透明了  （png8全透 png24半透明）
+	双边距问题 display:inline;
+	opacity 不兼容  暂无办法
